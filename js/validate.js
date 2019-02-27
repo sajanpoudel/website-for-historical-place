@@ -11,5 +11,9 @@
 })(typeof window !== 'undefined' ? window : this, function () {
   'use strict';
 
-  return {};
+  function isNotBlank(value) {
+    return typeof value === 'string' && value.trim().length > 0;
+  }
+
+  return { isNotBlank: isNotBlank };
 });
