@@ -10,3 +10,9 @@ test('isNotBlank rejects empty and whitespace only values', () => {
   assert.equal(Validate.isNotBlank(''), false);
   assert.equal(Validate.isNotBlank('   '), false);
 });
+
+test('isNotBlank rejects values that are not text', () => {
+  assert.equal(Validate.isNotBlank(null), false);
+  assert.equal(Validate.isNotBlank(undefined), false);
+  assert.equal(Validate.isNotBlank(42), false);
+});
