@@ -43,3 +43,22 @@ test('neighbour wraps around at both ends', () => {
   assert.equal(neighbour(0, 5, -1), 4);
   assert.equal(neighbour(2, 0, 1), -1);
 });
+
+test('the arrow keys move to the next and the previous photo', () => {
+  const window = load();
+  const overlay = window.document.querySelector('.lightbox');
+  const images = window.document.querySelectorAll('.row-img');
+  images[0].dispatchEvent(new window.Event('click'));
+  window.document.dispatchEvent(new window.KeyboardEvent('keydown', { key: 'ArrowRight' }));
+  assert.equal(overlay.querySelector('img').alt, images[1].alt);
+  window.document.dispatchEvent(new window.KeyboardEvent('keydown', { key: 'ArrowLeft' }));
+  window.document.dispatchEvent(new window.KeyboardEvent('keydown', { key: 'ArrowLeft' }));
+  assert.equal(overlay.querySelector('img').alt, images[images.length - 1].alt);
+});
+
+test('the arrow keys do nothing while the lightbox is closed', () => {
+  const window = load();
+  const overlay = window.document.querySelector('.lightbox');
+  window.document.dispatchEvent(new window.KeyboardEvent('keydown', { key: 'ArrowRight' }));
+  assert.equal(overlay.hidden, true);
+});
