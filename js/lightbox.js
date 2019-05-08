@@ -2,6 +2,12 @@
 (function (root) {
   'use strict';
 
+  // Index of the neighbour of position `index` in a list of `length` items, wrapping around at both ends.
+  function neighbour(index, length, step) {
+    if (length <= 0) return -1;
+    return (index + step + length) % length;
+  }
+
   function create(doc) {
     var overlay = doc.createElement('div');
     overlay.className = 'lightbox';
@@ -38,6 +44,6 @@
     return box;
   }
 
-  root.Lightbox = { create: create, attach: attach };
+  root.Lightbox = { create: create, attach: attach, neighbour: neighbour };
   if (typeof module === 'object' && module.exports) module.exports = root.Lightbox;
 })(typeof window !== 'undefined' ? window : this);

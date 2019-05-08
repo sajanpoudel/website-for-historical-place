@@ -34,3 +34,12 @@ test('clicking the overlay or pressing Escape closes it', () => {
   window.document.dispatchEvent(new window.KeyboardEvent('keydown', { key: 'Escape' }));
   assert.equal(overlay.hidden, true);
 });
+
+test('neighbour wraps around at both ends', () => {
+  const window = load();
+  const { neighbour } = window.Lightbox;
+  assert.equal(neighbour(0, 5, 1), 1);
+  assert.equal(neighbour(4, 5, 1), 0);
+  assert.equal(neighbour(0, 5, -1), 4);
+  assert.equal(neighbour(2, 0, 1), -1);
+});
