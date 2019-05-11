@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sajanpoudel.github.io/website-for-historical-place/sitemap.xml
