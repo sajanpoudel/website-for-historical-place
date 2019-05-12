@@ -15,5 +15,11 @@
     return typeof value === 'string' && value.trim().length > 0;
   }
 
-  return { isNotBlank: isNotBlank };
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function isValidEmail(value) {
+    return typeof value === 'string' && EMAIL.test(value.trim());
+  }
+
+  return { isNotBlank: isNotBlank, isValidEmail: isValidEmail };
 });
