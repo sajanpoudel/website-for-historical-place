@@ -24,6 +24,23 @@ body {
 
 
 <style>
+.site-nav{
+display:flex;
+align-items:center;
+gap:24px;
+padding:0 40px 10px;
+background-color:#999;
+color:#eee;
+font-size:35px;
+}
+.site-nav a{
+font-size:15px;
+color:white;
+text-decoration:none;
+}
+.site-nav .sarwan{
+margin-right:auto;
+}
 .main-row{
 display:block;
 padding:15px 0;
@@ -53,22 +70,13 @@ transition:all 2s;
 <div id="hero" style=" //background:url(1.jpg); background-size:cover;height:125vh;">
 
 
-<div style="font-size:35; background-color:#999;padding-bottom:10px; color:#eee;">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span class="central-rectangle" style="//margin-top:7;     //padding-bottom:6;">&nbsp;&nbsp;
-</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sarwan">Lumbini </span>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="lumbini.html" style="font-size:15;color:white;">HOME</a>
-&nbsp;&nbsp;&nbsp;
-<a href="gallery.html" style="font-size:15;color:white;">GALLERY</a>
-&nbsp;&nbsp;&nbsp;
-<a href="lumbini.html" style="font-size:15;color:white;"> SERVICE</a>&nbsp;&nbsp;&nbsp;
-<a href="contact.html" style="font-size:15;color:white;">CONTACT US </a>
-</div>
-
-
+<nav class="site-nav">
+<span class="sarwan">Lumbini</span>
+<a href="lumbini.html">HOME</a>
+<a href="gallery.html">GALLERY</a>
+<a href="lumbini.html">SERVICE</a>
+<a href="contact.html">CONTACT US</a>
+</nav>
 
 <div class="main-row">
 <div class="col-3"><img class="row-img" src="pillar.jpg" alt="The Ashoka Pillar" loading="lazy"></div>
