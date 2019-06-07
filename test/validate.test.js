@@ -21,3 +21,9 @@ test('isValidEmail accepts normal addresses', () => {
   assert.equal(Validate.isValidEmail('techguys@gmail.com'), true);
   assert.equal(Validate.isValidEmail(' first.last@mail.example.org '), true);
 });
+
+test('isValidEmail rejects broken addresses', () => {
+  for (const bad of ['', 'plain', 'a@b', '@x.com', 'a b@x.com', 'a@x.c']) {
+    assert.equal(Validate.isValidEmail(bad), false, bad);
+  }
+});
