@@ -21,5 +21,11 @@
     return typeof value === 'string' && EMAIL.test(value.trim());
   }
 
-  return { isNotBlank: isNotBlank, isValidEmail: isValidEmail };
+  function isValidPhone(value) {
+    if (typeof value !== 'string') return false;
+    var digits = value.replace(/[\s().-]/g, '');
+    return /^\+?[0-9]{7,15}$/.test(digits);
+  }
+
+  return { isNotBlank: isNotBlank, isValidEmail: isValidEmail, isValidPhone: isValidPhone };
 });
