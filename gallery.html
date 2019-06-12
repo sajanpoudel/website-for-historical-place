@@ -67,6 +67,28 @@ gap:12px;
 padding:0 16px 10px;
 }
 }
+.row-img{
+cursor:zoom-in;
+}
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(0,0,0,0.85);
+z-index:10;
+}
+.lightbox[hidden]{
+display:none;
+}
+.lightbox img{
+max-width:90%;
+max-height:90%;
+}
 .row-img:hover{
 border:10px solid yellowgreen;
 
@@ -106,5 +128,7 @@ transition:all 2s;
 <div class="col-3"><img class="row-img" src="ashoka.jpg" alt="Ashoka" loading="lazy"></div>
 </div>
 </div>
+<script src="js/lightbox.js"></script>
+<script>Lightbox.attach(document, ".row-img");</script>
 </body>
 </html>
