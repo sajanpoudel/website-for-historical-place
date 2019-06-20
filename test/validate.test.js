@@ -33,3 +33,10 @@ test('isValidPhone accepts local and international numbers', () => {
   assert.equal(Validate.isValidPhone('+977 986-665-6576'), true);
   assert.equal(Validate.isValidPhone('(064) 580 123'), true);
 });
+
+test('isValidPhone rejects short numbers and letters', () => {
+  assert.equal(Validate.isValidPhone('12345'), false);
+  assert.equal(Validate.isValidPhone('98666abc76'), false);
+  assert.equal(Validate.isValidPhone(''), false);
+  assert.equal(Validate.isValidPhone(null), false);
+});
