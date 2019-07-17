@@ -27,5 +27,15 @@
     return /^\+?[0-9]{7,15}$/.test(digits);
   }
 
-  return { isNotBlank: isNotBlank, isValidEmail: isValidEmail, isValidPhone: isValidPhone };
+  // Returns an object that maps a field name to its error message. It is empty when all is fine.
+  function validateContact(values) {
+    var errors = {};
+    if (!isNotBlank(values.name)) errors.name = 'Please enter your full name.';
+    if (!isNotBlank(values.address)) errors.address = 'Please enter your address.';
+    if (!isValidPhone(values.phone)) errors.phone = 'Please enter a valid phone number.';
+    if (!isValidEmail(values.email)) errors.email = 'Please enter a valid email address.';
+    return errors;
+  }
+
+  return { isNotBlank: isNotBlank, isValidEmail: isValidEmail, isValidPhone: isValidPhone, validateContact: validateContact };
 });
