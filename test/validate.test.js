@@ -40,3 +40,8 @@ test('isValidPhone rejects short numbers and letters', () => {
   assert.equal(Validate.isValidPhone(''), false);
   assert.equal(Validate.isValidPhone(null), false);
 });
+
+test('isValidPhone rejects numbers that are too long', () => {
+  assert.equal(Validate.isValidPhone('1234567890123456'), false);
+  assert.equal(Validate.isValidPhone('123456789012345'), true);
+});
