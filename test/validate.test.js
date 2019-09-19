@@ -45,3 +45,13 @@ test('isValidPhone rejects numbers that are too long', () => {
   assert.equal(Validate.isValidPhone('1234567890123456'), false);
   assert.equal(Validate.isValidPhone('123456789012345'), true);
 });
+
+test('validateContact returns no errors for a complete form', () => {
+  const errors = Validate.validateContact({
+    name: 'Ada Lovelace',
+    address: 'Lumbini, Nepal',
+    phone: '9866656576',
+    email: 'ada@example.com',
+  });
+  assert.deepEqual(errors, {});
+});
