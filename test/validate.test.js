@@ -55,3 +55,8 @@ test('validateContact returns no errors for a complete form', () => {
   });
   assert.deepEqual(errors, {});
 });
+
+test('validateContact reports every missing field', () => {
+  const errors = Validate.validateContact({});
+  assert.deepEqual(Object.keys(errors).sort(), ['address', 'email', 'name', 'phone']);
+});
