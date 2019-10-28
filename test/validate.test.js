@@ -60,3 +60,14 @@ test('validateContact reports every missing field', () => {
   const errors = Validate.validateContact({});
   assert.deepEqual(Object.keys(errors).sort(), ['address', 'email', 'name', 'phone']);
 });
+
+test('validateContact only reports the broken fields', () => {
+  const errors = Validate.validateContact({
+    name: 'Ada',
+    address: 'Lumbini',
+    phone: '123',
+    email: 'ada@example.com',
+  });
+  assert.deepEqual(Object.keys(errors), ['phone']);
+  assert.match(errors.phone, /valid phone/);
+});
