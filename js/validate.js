@@ -37,5 +37,8 @@
     return errors;
   }
 
-  return { isNotBlank: isNotBlank, isValidEmail: isValidEmail, isValidPhone: isValidPhone, validateContact: validateContact };
+  // The form control ids on the contact and login pages, in the order of the form.
+  var fieldIds = ['full-name', 'address', 'phone', 'email'];
+
+  return { isNotBlank: isNotBlank, isValidEmail: isValidEmail, isValidPhone: isValidPhone, validateContact: validateContact, fieldIds: fieldIds };
 });
