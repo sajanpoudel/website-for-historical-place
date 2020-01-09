@@ -1,0 +1,14 @@
+{
+  "name": "website-for-historical-place",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small static website about Lumbini",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "validate": "html-validate \"*.html\""
+  },
+  "devDependencies": {
+    "html-validate": "^9.0.0",
+    "jsdom": "^25.0.0"
+  }
+}
