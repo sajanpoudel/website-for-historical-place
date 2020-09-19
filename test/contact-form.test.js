@@ -34,3 +34,9 @@ test('an empty form is blocked and every field shows a message', () => {
     assert.notEqual(window.document.getElementById(`${id}-error`).textContent, '', id);
   }
 });
+
+test('a complete form is not blocked', () => {
+  const window = load();
+  fill(window, { 'full-name': 'Ada', address: 'Lumbini', phone: '9866656576', email: 'ada@example.com' });
+  assert.equal(submit(window).defaultPrevented, false);
+});
