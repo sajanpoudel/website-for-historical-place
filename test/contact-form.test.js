@@ -40,3 +40,11 @@ test('a complete form is not blocked', () => {
   fill(window, { 'full-name': 'Ada', address: 'Lumbini', phone: '9866656576', email: 'ada@example.com' });
   assert.equal(submit(window).defaultPrevented, false);
 });
+
+test('messages disappear once the field is fixed', () => {
+  const window = load();
+  submit(window);
+  fill(window, { 'full-name': 'Ada', address: 'Lumbini', phone: '9866656576', email: 'ada@example.com' });
+  submit(window);
+  assert.equal(window.document.getElementById('email-error').textContent, '');
+});
