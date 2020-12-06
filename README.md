@@ -11,6 +11,15 @@ A small static website about Lumbini, the birthplace of Lord Buddha in Nepal.
 | `contact.html` | Contact form |
 | `login.html` | Sign up style form that opens the home page on submit |
 
+## Scripts and styles
+
+| File | Purpose |
+| --- | --- |
+| `css/site.css` | Navigation bar and back to top button used by every page |
+| `js/validate.js`, `js/form.js` | Contact form checks |
+| `js/lightbox.js` | Full size photos in the gallery |
+| `js/backtotop.js` | Back to top button on the home page |
+
 ## Run
 
 There is nothing to build. Open `lumbini.html` in a browser. The pages expect
