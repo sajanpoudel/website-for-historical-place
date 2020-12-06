@@ -8,6 +8,7 @@ A small static website about Lumbini, the birthplace of Lord Buddha in Nepal.
 | --- | --- |
 | `lumbini.html` | Home page with the introduction, the story of Buddha and the Ashoka Pillar |
 | `gallery.html` | Photo gallery |
+| `sites.html` | The main sites of the Sacred Garden |
 | `contact.html` | Contact form |
 | `login.html` | Sign up style form that opens the home page on submit |
 
