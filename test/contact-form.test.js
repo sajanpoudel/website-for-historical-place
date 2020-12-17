@@ -48,3 +48,11 @@ test('messages disappear once the field is fixed', () => {
   submit(window);
   assert.equal(window.document.getElementById('email-error').textContent, '');
 });
+
+test('only the broken field gets a message', () => {
+  const window = load();
+  fill(window, { 'full-name': 'Ada', address: 'Lumbini', phone: '123', email: 'ada@example.com' });
+  submit(window);
+  assert.notEqual(window.document.getElementById('phone-error').textContent, '');
+  assert.equal(window.document.getElementById('email-error').textContent, '');
+});
