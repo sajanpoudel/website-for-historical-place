@@ -56,3 +56,8 @@ test('only the broken field gets a message', () => {
   assert.notEqual(window.document.getElementById('phone-error').textContent, '');
   assert.equal(window.document.getElementById('email-error').textContent, '');
 });
+
+test('the message slots announce themselves as alerts', () => {
+  const window = load();
+  assert.equal(window.document.getElementById('phone-error').getAttribute('role'), 'alert');
+});
