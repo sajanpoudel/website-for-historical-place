@@ -12,4 +12,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npx --yes html-validate "*.html"
+      - run: npm install --ignore-scripts
+      - run: npm run validate
+      - run: npm test
