@@ -16,3 +16,11 @@ A small static website about Lumbini, the birthplace of Lord Buddha in Nepal.
 There is nothing to build. Open `lumbini.html` in a browser. The pages expect
 the images they reference (for example `buddha.jpg`, `gate.jpg` and
 `pillar.jpg`) to sit in the same folder.
+
+## Checking the markup
+
+```
+npx html-validate "*.html"
+```
+
+The rules are in `.htmlvalidate.json`. Inline styles are allowed because the pages still use them.
