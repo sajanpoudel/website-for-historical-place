@@ -24,3 +24,12 @@ npx html-validate "*.html"
 ```
 
 The rules are in `.htmlvalidate.json`. Inline styles are allowed because the pages still use them.
+
+## Contact form checks
+
+`js/validate.js` holds the checks (name, address, phone, email) and `js/form.js` shows a message under every field that has a problem before the form is sent. Run the tests with:
+
+```
+npm install
+npm test
+```
