@@ -63,22 +63,10 @@ color:#b00020;
 font-size:14px;
 margin-left:10px;
 }
-.sajan1{
-     margin-left: 600px;
- }
 
 
- .sajan2{
-     margin-left: 50px;
- }
 
- .sajan3{
-     margin-left: 50px;
- }
 
- .sajan4{
-     margin-left: 50px;
- }
  .central-rectangle{
 border: 2px solid white;
 width:20px;
@@ -92,6 +80,21 @@ margin-left:10px;
    color:#ab47bc;
    font-size:17px;
    }
+.site-nav{
+display:flex;
+align-items:center;
+gap:50px;
+color:#eee;
+font-size:35px;
+}
+.site-nav a{
+font-size:15px;
+color:white;
+text-decoration:none;
+}
+.site-nav .sarwan{
+margin-right:auto;
+}
 </style>
 </head>
 <body style="background-size:cover;">
@@ -102,16 +105,14 @@ margin-left:10px;
 <div id="hero" style=" background:url(1.jpg); background-size:cover;height:8vh;">
 
 
-    <div style="font-size:35px; color:#eee;">
+    <nav class="site-nav">
     <span class="central-rectangle"></span>
-    <span class="sarwan">Lumbini </span>  
-    <a href="lumbini.html" style="font-size:15px;color:white;"> <span class="sajan1">HOME</span></a>
-    
-    <a href="gallery.html" style="font-size:15px;color:white;"> <span class="sajan2">GALLERY</span></a>
-    
-    <a href="home.html" style="font-size:15px;color:white;">  <span class="sajan3">SERVICE</span></a>
-    <a href="contact.html" style="font-size:15px;color:white;"> <span class="sajan4">CONTACT US</span> </a>
-    
+    <span class="sarwan">Lumbini</span>
+    <a class="sajan1" href="lumbini.html">HOME</a>
+    <a class="sajan2" href="gallery.html">GALLERY</a>
+    <a class="sajan3" href="lumbini.html">SERVICE</a>
+    <a class="sajan4" href="contact.html">CONTACT US</a>
+    </nav>
 
 <div class="main-div" >
 <form class="form1">
@@ -124,7 +125,6 @@ margin-left:10px;
 
 
 </form>
-</div>
 </div>
 </div>
 
